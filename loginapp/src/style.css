@@ -1,0 +1,52 @@
+
+Raw Blame
+     
+body{
+    width: 80%;
+    margin: 2rem auto;
+}
+.is-primary.input:invalid {
+    border: 2px solid red;
+}
+
+main{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+@media screen and (max-width: 40em){
+   
+}
+
+@media screen and (min-width: 40em){
+   
+}
+
+
+
+.view{
+    overflow: auto;
+    height: 80vh;
+    display: grid;
+    place-items: center;
+}
+
+
+r-login form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+b-list{
+    width: 80%;
+    padding-top: 10%;
+}
+li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+}
