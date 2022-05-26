@@ -42,3 +42,21 @@ func Test3NumberSum(t *testing.T) {
 		}
 	})
 }
+
+func Test4NumberSum(t *testing.T) {
+	t.Run("ok result", func(t *testing.T) {
+		expected := [][]int{{7, 6, 4, -1}, {7, 6, 1, 2}}
+		result := sumnumbers.FourNumberSum([]int{7, 6, 4, -1, 1, 2}, 16)
+		if !reflect.DeepEqual(expected, result) {
+			t.Errorf("Expected %v got %v", expected, result)
+		}
+	})
+
+	t.Run("no sum", func(t *testing.T) {
+		expected := [][]int{}
+		result := sumnumbers.FourNumberSum([]int{12, 3, 1, 2, -6, 5, -8, 6}, 30)
+		if !reflect.DeepEqual(expected, result) {
+			t.Errorf("Expected %v got %v", expected, result)
+		}
+	})
+}
