@@ -41,3 +41,34 @@ func TestSortedSquaredArray(t *testing.T) {
 	})
 
 }
+
+func TestTournamentWinner(t *testing.T) {
+	t.Run("winner", func(t *testing.T) {
+		competitions := [][]string{
+			{"Alfa", "Beta"},
+			{"Beta", "Gama"},
+			{"Gama", "Alfa"},
+		}
+		results := []int{1, 0, 0}
+		expected := "Alfa"
+		winner := arrays.TournamentWinner(competitions, results)
+		if winner != expected {
+			t.Errorf("got %v want %v", winner, expected)
+		}
+
+	})
+
+}
+
+func TestNonConstructibleCoinChange(t *testing.T) {
+	t.Run("no coins 20", func(t *testing.T) {
+		input := []int{5, 7, 1, 1, 2, 3, 22}
+		expected := 20
+		result := arrays.NonConstructibleCoinChange(input)
+		if result != expected {
+			t.Errorf("got %v want %v", result, expected)
+		}
+
+	})
+
+}
