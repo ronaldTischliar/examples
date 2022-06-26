@@ -72,3 +72,25 @@ func TestNonConstructibleCoinChange(t *testing.T) {
 	})
 
 }
+
+func TestSmallestDifference(t *testing.T) {
+	t.Run("SmallestDifference", func(t *testing.T) {
+		result := arrays.SmallestDifference([]int{-1, 5, 10, 20, 28, 3}, []int{26, 134, 135, 15, 17})
+		expected := []int{28, 26}
+		if !reflect.DeepEqual(expected, result) {
+			t.Errorf("Expected %v got %v", expected, result)
+		}
+	})
+
+}
+
+func TestMoveElementToEnd(t *testing.T) {
+	t.Run("MoveElementToEnd", func(t *testing.T) {
+		result := arrays.MoveElementToEnd([]int{2, 1, 2, 2, 2, 3, 4, 2}, 2)
+		expected := []int{4, 1, 3, 2, 2, 2, 2, 2}
+		if !reflect.DeepEqual(expected, result) {
+			t.Errorf("Expected %v got %v", expected, result)
+		}
+	})
+
+}
